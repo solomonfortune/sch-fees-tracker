@@ -2,6 +2,7 @@ import { useState, useCallback, useMemo } from "react";
 import { LayoutDashboard, Users, CreditCard, BarChart3, Settings, Receipt, LogOut, Menu, X } from "lucide-react";
 import { Avatar, Badge, Toast, Button } from "./components/UI";
 import { uid, generateReceipt, generateOPReceipt } from "./utils/helpers";
+import { SEED_STUDENTS, SEED_PAYMENTS, SEED_OTHER_PAYMENTS, SEED_SETTINGS } from "./utils/seedData";
 
 import WelcomePage from "./pages/WelcomePage";
 import AuthPage from "./pages/AuthPage";
@@ -59,7 +60,16 @@ export default function App() {
   const updateSettings = useCallback(data => { setSettings(data); if (data.name) setSchoolName(data.name); showToast("Settings saved!"); }, []);
 
   if (screen === "welcome") return <WelcomePage onGetStarted={() => setScreen("auth")} />;
-  if (screen === "auth") return <AuthPage onDone={(name, em) => { setSchoolName(name); setEmail(em); setSettings(s => ({ ...s, name, email: em })); setScreen("app"); setPage("dashboard"); }} onBack={() => setScreen("welcome")} />;
+  if (screen === "auth") return <AuthPage onDone={(name, em) => {
+    setSchoolName(name);
+    setEmail(em);
+    setStudents(SEED_STUDENTS);
+    setPayments(SEED_PAYMENTS);
+    setOtherPayments(SEED_OTHER_PAYMENTS);
+    setSettings({ ...SEED_SETTINGS, name, email: em });
+    setScreen("app");
+    setPage("dashboard");
+  }} onBack={() => setScreen("welcome")} />;
 
   const nav = [
     { id: "dashboard", label: "Dashboard", icon: LayoutDashboard },
@@ -150,7 +160,7 @@ export default function App() {
             </div>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-            <Badge color="var(--a500)" bg="var(--a50)">MyfeesTracker</Badge>
+            <Badge color="var(--a500)" bg="var(--a50)">myFeesTracker</Badge>
             <Avatar size={36} letter={email?.[0]?.toUpperCase() || "U"} />
           </div>
         </div>

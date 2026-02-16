@@ -78,7 +78,7 @@ export default function WelcomePage({ onGetStarted }) {
       <section style={{ maxWidth: 1200, margin: "0 auto", padding: "60px 24px 80px", display: "flex", alignItems: "center", gap: 60, flexWrap: "wrap" }}>
         <div className="lp-hero-text" style={{ flex: "1 1 400px", minWidth: 280 }}>
           <div className="lp-badge-anim" style={{ display: "inline-block", background: "var(--g50)", border: "1px solid var(--g200)", borderRadius: 20, padding: "6px 16px", marginBottom: 24 }}>
-            <span style={{ fontSize: 12, fontWeight: 700, color: "var(--g700)", letterSpacing: ".5px", textTransform: "uppercase" }}>School Fees Records Management</span>
+            <span style={{ fontSize: 12, fontWeight: 700, color: "var(--g700)", letterSpacing: ".5px", textTransform: "uppercase" }}>School fees Records management</span>
           </div>
           <h1 className="lp-title-anim" style={{ fontSize: "clamp(32px,5vw,52px)", fontWeight: 900, lineHeight: 1.08, color: "var(--s900)", letterSpacing: "-1.5px", marginBottom: 20 }}>
             Simplify School Fee Management with <span className="lp-gradient-text">myFeesTracker</span>
@@ -87,7 +87,7 @@ export default function WelcomePage({ onGetStarted }) {
             The all-in-one platform for tracking collections, processing payments, and generating financial reports with ease. Modernize your bursary and give parents peace of mind.
           </p>
           <div className="lp-btns-anim" style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
-            <button onClick={onGetStarted} className="bp" style={{ fontSize: 15, fontWeight: 700, cursor: "pointer", padding: "14px 28px", borderRadius: 12, fontFamily: "var(--font)", display: "flex", alignItems: "center", gap: 8, border: "none" }}>Try for Free</button>
+            <button onClick={onGetStarted} className="bp" style={{ fontSize: 15, fontWeight: 700, cursor: "pointer", padding: "14px 28px", borderRadius: 12, fontFamily: "var(--font)", display: "flex", alignItems: "center", gap: 8, border: "none" }}>Try Now</button>
           </div>
         </div>
         <div className="lp-hero-visual" style={{ flex: "1 1 400px", minWidth: 280, transform: `translateY(${scrollY * -0.04}px)` }}>
@@ -101,7 +101,7 @@ export default function WelcomePage({ onGetStarted }) {
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 20 }}>
                 <div>
                   <p style={{ fontSize: 11, color: "var(--s400)", fontWeight: 600, textTransform: "uppercase", letterSpacing: ".5px" }}>Total Collected</p>
-                  <p style={{ fontSize: 28, fontWeight: 800, color: "var(--g700)" }}>UGX 59.4M</p>
+                  <p style={{ fontSize: 28, fontWeight: 800, color: "var(--g700)" }}>UGX 12.4M</p>
                 </div>
                 <div style={{ width: 48, height: 48, borderRadius: 12, background: "var(--g50)", display: "flex", alignItems: "center", justifyContent: "center" }}><BarChart3 size={24} color="var(--g600)" /></div>
               </div>
@@ -152,8 +152,8 @@ export default function WelcomePage({ onGetStarted }) {
         <div style={{ background: "linear-gradient(135deg,var(--g700) 0%,var(--g600) 50%,var(--g500) 100%)", borderRadius: 24, padding: "60px 40px", textAlign: "center", position: "relative", overflow: "hidden", opacity: ctaVis ? 1 : 0, transform: ctaVis ? "scale(1)" : "scale(.92)", transition: "all .7s" }}>
           <div style={{ position: "absolute", top: -60, right: -60, width: 200, height: 200, borderRadius: "50%", background: "rgba(255,255,255,.06)" }} />
           <h2 style={{ fontSize: "clamp(24px,3.5vw,36px)", fontWeight: 900, color: "#fff", marginBottom: 16, position: "relative" }}>Ready to transform your school's billing?</h2>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,.8)", maxWidth: 480, margin: "0 auto 32px", lineHeight: 1.7, position: "relative" }}>Try for free and see how myFeesTracker simplifies fee collection. No signup required.</p>
-          <button onClick={onGetStarted} className="lp-cta-btn" style={{ background: "#fff", color: "var(--g700)", border: "none", fontSize: 15, fontWeight: 700, cursor: "pointer", padding: "14px 28px", borderRadius: 12, fontFamily: "var(--font)", boxShadow: "0 4px 16px rgba(0,0,0,.15)", position: "relative" }}>Try Now</button>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,.8)", maxWidth: 480, margin: "0 auto 32px", lineHeight: 1.7, position: "relative" }}>Try and see how myFeesTracker simplifies fee collection. No signup required.</p>
+          <button onClick={onGetStarted} className="lp-cta-btn" style={{ background: "#fff", color: "var(--g700)", border: "none", fontSize: 15, fontWeight: 700, cursor: "pointer", padding: "14px 28px", borderRadius: 12, fontFamily: "var(--font)", boxShadow: "0 4px 16px rgba(0,0,0,.15)", position: "relative" }}>Try</button>
         </div>
       </section>
 

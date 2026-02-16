@@ -50,7 +50,7 @@ export default function AuthPage({ onDone, onBack }) {
           <div style={{ width: 32, height: 32, borderRadius: 9, background: "linear-gradient(135deg,var(--g600),var(--g700))", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 900, fontSize: 15 }}>m</div>
           <span style={{ fontSize: 16, fontWeight: 800, color: "var(--s900)", letterSpacing: "-.2px" }}>myFeesTracker</span>
         </div>
-        <Badge color="var(--a500)" bg="var(--a50)">MyFeesTracker</Badge>
+        <Badge color="var(--a500)" bg="var(--a50)">myFeesTracker</Badge>
       </div>
 
       {/* Content */}
